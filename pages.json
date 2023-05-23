@@ -1,0 +1,171 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#345DC2", //导航栏背景色
+				"enablePullDownRefresh": true, // 开启下拉刷新
+				// "backgroundTextStyle":"light",
+				// "backgroundColorTop":"#333333",
+				"app-plus": {
+					// "pullToRefresh": {
+					// 	"support": true,
+					// 	"style":"default"
+					// },
+					"bounce": "none", //关闭回弹
+					"titleNView": { //自定义导航配置
+						"type": "transparent", //滚动透明渐变
+						"searchInput": {
+							"align": "center",
+							"backgroundColor": "#f0f1f2",
+							"borderRadius": "30rpx",
+							"placeholder": "搜索你想要的内容",
+							"placeholderColor": "979c9d",
+							"disabled": true //禁止输入，点击跳转到搜索页
+						}
+						//#ifdef APP-PLUS
+						,
+						"buttons": [ //按钮注意是是数组
+							{
+								"fontSrc": "/static/icon/iconfont.ttf", //指定图标文件
+								"text": "\ue689", //u开头，e开始
+								"fontSize": "30",
+								"background": "rgba(0,0,0,0)"
+							}
+						]
+						//#endif
+					}
+				}
+			}
+		}, {
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "分类",
+				"navigationBarBackgroundColor": "#345DC2", //导航栏背景色
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"bounce": "none",
+					"titleNView": {
+						"buttons": [{
+								"color": "#fff",
+								"fontSize": "18",
+								"fontSrc": "/static/icon/iconfont.ttf",
+								"text": "\ue608",
+								"float": "right"
+							}
+						]
+					}
+				}
+			}
+		}, {
+			"path": "pages/article/article",
+			"style": {
+				"navigationBarTitleText": "阅读"
+			}
+
+		}, {
+			"path": "pages/question/question",
+			"style": {
+				"navigationBarTitleText": "问答"
+			}
+
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+
+		}, {
+			"path": "pages/public/web-view", //web浏览器组件
+			"style": {
+				"navigationBarTitleText": "扫描结果",
+				"app-plus": {
+					"bounce": "none" //禁止页面回弹效果
+				}
+			}
+
+		}
+	    ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "app-plus": {
+                	"bounce": "none",
+					"titleNView": {
+						"autoBackButton": false ,// 隐藏后退按钮（app)
+						"searchInput": {
+							"align": "left",
+							"placeholder": "搜索你想要的内容",
+							"borderRadius": "30rpx",
+							"backgroundColor": "#f0f1f2"
+						},
+						"buttons": [
+							{
+								"float": "right",
+								"text": "取消",
+								"fontSize": "16",
+								"color": "#2a333b"
+							}
+						]
+					}
+                }
+            }
+            
+        }
+    ],
+	//标签栏
+	"tabBar": {
+		"color": "#b0abb3", //未选中字体颜色
+		"selectedColor": "#345DC2", //选中字体颜色
+		"backgroundColor": "#F8F8F8", //背景色
+		"borderStyle": "white", //tabbar边框的颜色
+		"fontSize": "11px", //字体大小
+		"height": "52px", //标签栏高度
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/static/tab/index.png",
+				"selectedIconPath": "static/static/tab/index-active.png"
+
+			},
+			{
+				"pagePath": "pages/category/category",
+				"text": "分类",
+				"iconPath": "static/static/tab/category.png",
+				"selectedIconPath": "static/static/tab/category-active.png"
+
+			},
+			{
+				"pagePath": "pages/article/article",
+				"text": "阅读",
+				"iconPath": "static/static/tab/article.png",
+				"selectedIconPath": "static/static/tab/article-active.png"
+
+			},
+			{
+				"pagePath": "pages/question/question",
+				"text": "问答",
+				"iconPath": "static/static/tab/question.png",
+				"selectedIconPath": "static/static/tab/question-active.png"
+
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "static/static/tab/my.png",
+				"selectedIconPath": "static/static/tab/my-active.png"
+
+			}
+		]
+	},
+	"globalStyle": {
+		// 状态栏与导航栏背景色
+		"navigationBarBackgroundColor": "#FFFFFF",
+		// 状态栏与导航栏字体颜色
+		"navigationBarTextStyle": "black",
+		// 上拉，下拉回弹背景色（ios真机微信小程序有效）
+		"backgroundColor": "#F8F9FB"
+	}
+}

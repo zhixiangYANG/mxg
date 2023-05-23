@@ -1,0 +1,1 @@
+<view><uni-search-bar vue-id="50cad900-1" radius="100" placeholder="搜索你想要的内容" clearButton="auto" cancelButton="always" data-event-opts="{{[['^cancel',[['navBack',[1]]]],['^confirm',[['doSearch']]]]}}" bind:cancel="__e" bind:confirm="__e" bind:__l="__l"></uni-search-bar></view>
